@@ -2,6 +2,8 @@ import { FaChalkboardTeacher } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 function Home() {
+  const handleOnExport = () => {}
+
   return (
     <div className='hero'>
       <div className='text-center  hero-content'> </div>
@@ -18,34 +20,13 @@ function Home() {
 
         <div className='flex-1 px-2 mx-2'>
           <div className='flex justify-end'>
-            <Link
-              to='/SelectMenuAllocatedList'
-              className='mr-2 btn  btn-outline btn-info btn-lg'
+            <button
+              // id={tempSemester}
+              onClick={handleOnExport}
+              className='btn  m-3 btn-lg   btn-outline btn-accent'
             >
-              Allocated List
-            </Link>
-
-            {/* <Link to='/about' className='btn btn-ghost btn-sm rounded-btn'>
-              About
-            </Link> */}
-            <Link
-              to='/AddMentor'
-              className=' mr-2 btn  btn-outline btn-info btn-lg'
-            >
-              Add Mentor
-            </Link>
-            <Link
-              to='/AddMentee'
-              className='  mr-2 btn  btn-outline btn-info btn-lg'
-            >
-              Add Mentee
-            </Link>
-            <Link
-              to='/Allocation'
-              className=' mr-2 btn  btn-outline btn-info btn-lg'
-            >
-              Allocation
-            </Link>
+              Export to Excel
+            </button>
           </div>
         </div>
       </div>
