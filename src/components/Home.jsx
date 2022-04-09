@@ -2,7 +2,8 @@ import { FaChalkboardTeacher } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 function Home() {
-  const handleOnExport = () => {}
+  const semesterData = () => {}
+  const menteeData = () => {}
 
   return (
     <div className='hero'>
@@ -22,10 +23,18 @@ function Home() {
           <div className='flex justify-end'>
             <button
               // id={tempSemester}
-              onClick={handleOnExport}
+              onClick={semesterData}
               className='btn  m-3 btn-lg   btn-outline btn-accent'
             >
-              Export to Excel
+              fetch data from database where selected semester data
+            </button>
+
+            <button
+              // id={tempSemester}
+              onClick={menteeData}
+              className='btn  m-3 btn-lg   btn-outline btn-accent'
+            >
+              fetch single mentte data
             </button>
           </div>
         </div>
