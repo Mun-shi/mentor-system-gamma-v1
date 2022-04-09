@@ -3,7 +3,15 @@ import { Link } from "react-router-dom"
 
 function Home() {
   const semesterData = () => {}
-  const menteeData = () => {}
+  const menteeData = () => {
+    myFirstDatabase.findOne({ semester: 2, rollno: "37" }, function(err, result) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send(result);
+      }
+    });
+  }
 
   return (
     <div className='hero'>
